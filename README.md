@@ -12,7 +12,7 @@ Use `/tools/build.bat` to build your project by a double click  or set `/tools/b
 
 After the build has finished, you can find the built files in the `/build` directory.
 
-**Important note!** Rollup will not add included images, fonts etc. to the `/build/` directory unless you include them in `rollup.config.js` as follows:
+**Important note!** Rollup will not add included images, fonts, stylesheets etc. to the build folder unless you include them in `rollup.config.js` as follows:
 ```javascript
 export default {
     // ...
@@ -21,7 +21,8 @@ export default {
         copy({
             patterns: [
                 'images/**/*',
-                'fonts/*',
+                'scripts/*',
+                'stylesheet.css'
                 // etc..
             ]
         })
